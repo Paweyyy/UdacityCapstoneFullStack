@@ -81,8 +81,6 @@ def create_app(test_config=None):
     @app.route("/actors/<int:actor_id>", methods=["DELETE"])
     @requires_auth("delete:actors")
     def remove_actor(actor_id):
-        body = request.get_json()
-
         if actor_id is None:
             abort(404)
 
