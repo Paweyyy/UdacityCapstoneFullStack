@@ -2,6 +2,7 @@ import os
 from flask import Flask, json, jsonify, abort, request
 from models import setup_db, Actor, Movie
 from flask_cors import CORS
+from datetime import datetime
 
 from auth import AuthError, requires_auth
 
@@ -49,7 +50,7 @@ def create_app(test_config=None):
         })
 
     ### PATCH
-    @app.route("/actors/<int:actor_id>")
+    @app.route("/actors/<int:actor_id>", methods=["PATCH"])
     @requires_auth("update:actors")
     def update_actor(actor_id):
         body = request.get_json()
@@ -77,7 +78,7 @@ def create_app(test_config=None):
         })
 
     #### DELETE
-    @app.route("/actors/<int:actor_id>")
+    @app.route("/actors/<int:actor_id>", methods=["DELETE"])
     @requires_auth("delete:actors")
     def remove_actor(actor_id):
         body = request.get_json()
@@ -122,13 +123,16 @@ def create_app(test_config=None):
     @requires_auth("create:movies")
     def create_movie():
         body = request.get_json()
+        print(request.get_json())
         new_title = body["title"]
         new_release_date = body["release_date"]
 
         if new_title is None or new_release_date is None:
             abort(404)
 
-        movie = Movie(title=new_title, release_date=new_release_date)
+        new_converted_release_date = datetime.strptime(new_release_date, '%d/%m/%y %H:%M:%S')
+        print(new_converted_release_date)
+        movie = Movie(title=new_title, release_date=new_converted_release_date)
         movie.insert()
 
         return jsonify({
@@ -137,7 +141,7 @@ def create_app(test_config=None):
         })
 
     ### PATCH
-    @app.route("/movies/<int:movie_id>")
+    @app.route("/movies/<int:movie_id>", methods=["PATCH"])
     @requires_auth("update:movies")
     def update_movie(movie_id):
         body = request.get_json()
@@ -151,10 +155,10 @@ def create_app(test_config=None):
             abort(404)
 
         if "title" in body.keys():
-            movie.age = body["title"]
+            movie.title = body["title"]
 
         if "release_date" in body.keys():
-            movie.gender = body["release_date"]
+            movie.release_date = datetime.strptime(body["release_date"], '%d/%m/%y %H:%M:%S')
 
         return jsonify({
             "success": True,
@@ -162,7 +166,7 @@ def create_app(test_config=None):
         })
 
     #### DELETE
-    @app.route("/movie/<int:movie_id>")
+    @app.route("/movie/<int:movie_id>", methods=["DELETE"])
     @requires_auth("delete:movies")
     def remove_movie(movie_id):
         body = request.get_json()
