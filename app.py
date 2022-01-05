@@ -166,7 +166,7 @@ def create_app(test_config=None):
         })
 
     #### DELETE
-    @app.route("/movie/<int:movie_id>", methods=["DELETE"])
+    @app.route("/movies/<int:movie_id>", methods=["DELETE"])
     @requires_auth("delete:movies")
     def remove_movie(movie_id):
         body = request.get_json()
