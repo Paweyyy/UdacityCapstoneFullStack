@@ -110,11 +110,11 @@ def create_app(test_config=None):
     @requires_auth("read:movies")
     def get_movies():
         movies = Movie.query.all()
-        formateed_movies = [movie.format() for movie in movies]
+        formated_movies = [movie.format() for movie in movies]
         return jsonify({
             "success": True,
-            "actors": formateed_movies,
-            "count": len(formateed_movies)
+            "movies": formated_movies,
+            "count": len(formated_movies)
         })
 
 
