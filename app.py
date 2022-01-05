@@ -18,7 +18,7 @@ def create_app(test_config=None):
 
     #### GET
     @app.route("/actors", methods=["GET"])
-    #@requires_auth("read:actors")
+    @requires_auth("read:actors")
     def get_models():
         actors = Actor.query.all()
         formateed_actors = [actor.format() for actor in actors]
@@ -109,7 +109,7 @@ def create_app(test_config=None):
     @app.route("/movies", methods=["GET"])
     @requires_auth("read:movies")
     def get_movies():
-        movies = Actor.query.all()
+        movies = Movie.query.all()
         formateed_movies = [movie.format() for movie in movies]
         return jsonify({
             "success": True,
