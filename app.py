@@ -18,7 +18,7 @@ def create_app(test_config=None):
 
     #### GET
     @app.route("/actors", methods=["GET"])
-    @requires_auth("get:actors")
+    #@requires_auth("get:actors")
     def get_models():
         actors = Actor.query.all()
         formateed_actors = [actor.format() for actor in actors]
