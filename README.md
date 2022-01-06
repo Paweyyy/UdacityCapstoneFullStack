@@ -1,10 +1,7 @@
 # Casting Agency
 
 ## Introduction
-This project demonstrated the backend of a casting agency company that is responsible for creating movies and managing and assigning actors to those movies. 
-
-## Motivation behind the project
-
+This project demonstrated the backend of a casting agency company that is responsible for creating movies and managing actors. With the API Movies & Actors can be created, listed, updated and deleted. There are three general roles within the company: a Casting Assitant, a Casting Director and an Executive Producer with different permissions that are explained in a chapter below. Each Movie has a title and release date and each actor has a name, an age and a gender. Both, Actors & Movies have an unique id.
 
 ## Tech Stack used in the project
 The API was built using the programming language `python` and the webframework `flask`.
@@ -98,7 +95,167 @@ Auth0 is used for security and authentication of the api. The authentication and
 
 `update:movies` Can update movies
 
-## Documentation of the APIs
+## API Endpoints
+
+### Public Endpoints
+NONE - The whole API is fully protected and can only be accessed by authorized users.
+
+### Protected Endpoints
+
+#### GET /movies
+
+Explenation: Fetches a dictionary of movies with ids, titles and release dates aswell as the total count of movies and a success variable
+Request Arguments: `None`
+Roles with access permissions: Casting Assistants, Casting Directors, Executive Producers
+
+Sample response:
+```
+{
+    "count": 1,
+    "movies": [
+        {
+            "id": 14,
+            "release_date": "Fri, 25 Dec 2020 11:12:13 GMT",
+            "title": "New Movie"
+        }
+    ],
+    "success": true
+}
+``` 
+
+#### GET /actors
+
+Explenation: Fetches a dictionary of actors with ids, name, age and gender aswell as the total count of movies and a success variable
+Request Arguments: `None`
+Roles with access permissions: Casting Assistants, Casting Directors, Executive Producers
+
+Sample response:
+```
+{
+    "count": 1,
+    "actors": [
+        {
+            "age": 10,
+            "gender": "male",
+            "id": 2,
+            "name": "George Clooney"
+        }
+    ],
+    "success": true
+}
+``` 
+
+#### POST /movies
+
+Explenation: Creates a new movie.
+Request Arguments: a JSON formatted object with the following keys: `title`, `release_date`
+Roles with access permissions: Executive Producers
+
+Sample response:
+```
+{
+    "movies": [
+        {
+            "id": 14,
+            "release_date": "Fri, 25 Dec 2020 11:12:13 GMT",
+            "title": "New Movie"
+        }
+    ],
+    "success": true
+}
+``` 
+
+#### POST /actors
+
+Explenation: Creates a new actor.
+Request Arguments: a JSON formatted object with the following keys: `age`, `gender`, `name`
+Roles with access permissions: Casting Directors, Executive Producers
+
+Sample response:
+```
+{
+    "actors": [
+        {
+            "age": 10,
+            "gender": "male",
+            "id": 2,
+            "name": "George Clooney"
+        }
+    ],
+    "success": true
+}
+``` 
+
+#### UPDATE /movies/int:movie_id
+
+Explenation: Updates an existing movie.
+Request Arguments: URL Parameneter movie_id to specify which movie should be updated and a JSON formatted object with the at least one of the following keys: `title`, `release_date`
+Roles with access permissions: Casting Directors, Executive Producers
+
+Sample response:
+```
+{
+    "movies": [
+        {
+            "id": 14,
+            "release_date": "Fri, 25 Dec 2020 11:12:13 GMT",
+            "title": "New Movie"
+        }
+    ],
+    "success": true
+}
+``` 
+
+#### UPDATE /actors/int:actor_id
+
+Explenation: Updates an existing actor
+Request Arguments: URL Parameneter actor_id to specify which actor should be updated and a JSON formatted object with the at least one of the following keys:  `age`, `gender`, `name`
+Roles with access permissions: Casting Directors, Executive Producers
+
+Sample response:
+```
+{
+    "actors": [
+        {
+            "age": 10,
+            "gender": "male",
+            "id": 2,
+            "name": "George Clooney"
+        }
+    ],
+    "success": true
+}
+``` 
+
+#### DELETE /movies/int:movie_id
+
+Explenation: Deletes an existing movie.
+Request Arguments: URL Parameneter movie_id to specify which movie should be deleted
+Roles with access permissions: Executive Producers
+
+Sample response:
+```
+{
+    "id": 1,
+    "success": true
+}
+``` 
+
+#### DELETE /actors/int:actor_id
+
+Explenation: Updates an existing actor
+Request Arguments: URL Parameneter actor_id to specify which actor should be deleted
+Roles with access permissions: Casting Directors, Executive Producers
+
+Sample response:
+```
+{
+    "id": 1,
+    "success": true
+}
+``` 
+
+
 ## Heroku Link
 The web application is hostet at: https://udcapstone.herokuapp.com/
 
