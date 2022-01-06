@@ -28,7 +28,7 @@ Create the database:
   createdb postgres
 ```
 
-Make sure Database url in the `setup.sh` file is correct and includes the user credentials for your database and run:
+Make sure the DatabaseUrl in the `setup.sh` file is correct and includes the user credentials for your database and then run:
 ```
 chmod +x setup.sh
 source setup.sh
