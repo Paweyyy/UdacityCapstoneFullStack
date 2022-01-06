@@ -1,0 +1,1553 @@
+{
+	"info": {
+		"_postman_id": "14434232-c3ab-4655-bc77-a91bac530a2c",
+		"name": "CastingAgency",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Executive Producer",
+			"item": [
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik02c0hwNkc2dnNlM05PcV9pZ3FRayJ9.eyJpc3MiOiJodHRwczovL2Rldi10OWZ2ZXJ1bS51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTUzMTI3MzQ5Nzc4MDkyNzE4MzYiLCJhdWQiOiJDYXN0aW5nQWdlbmN5QVBJIiwiaWF0IjoxNjQxNDUzODc0LCJleHAiOjE2NDE1NDAyNzQsImF6cCI6Im9BNFFtdjlqZWp5dllTdDlGUFh4bHpXaFJ4b3M2TlI4Iiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJjcmVhdGU6YWN0b3JzIiwiY3JlYXRlOm1vdmllcyIsImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwicmVhZDphY3RvcnMiLCJyZWFkOm1vdmllcyIsInVwZGF0ZTphY3RvcnMiLCJ1cGRhdGU6bW92aWVzIl19.ccKxRIQ_LWAWcaRgfAEmRfhpwjRioCaroB0EPdMqhB_6eozb-1YEsPN1yTqxcvpI6qDTQjR7p9jDQYy14C663dYxC5B_EXFeju8E44A9oMBm3-aMKZh6-pQcVV1GphR6YhkJe88g9-rYvjdQa3T4vvlGviOXU8Vi6bGl29DU1XSp6i2ynpvA7nm6oi_9F9I8ifgsJ9Qd7VQ42wG37soqdXy8lmJCkNRXqq3y1NTme1mg2fp6Ab7o7x5SaLMTZf1uoeYuNrlwme6NSHH16SfQHTnZ8ZiUjCpDaO0TJVWB3-1T-mLZHdpAI7Ge35wnM2GYN0a5X8IfjovO_kq8v3QbKA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"New Movie\",\n    \"release_date\": \"25/12/20 11:12:13\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://udcapstone.herokuapp.com/movies",
+							"protocol": "https",
+							"host": [
+								"udcapstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik02c0hwNkc2dnNlM05PcV9pZ3FRayJ9.eyJpc3MiOiJodHRwczovL2Rldi10OWZ2ZXJ1bS51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTUzMTI3MzQ5Nzc4MDkyNzE4MzYiLCJhdWQiOiJDYXN0aW5nQWdlbmN5QVBJIiwiaWF0IjoxNjQxNDUzODc0LCJleHAiOjE2NDE1NDAyNzQsImF6cCI6Im9BNFFtdjlqZWp5dllTdDlGUFh4bHpXaFJ4b3M2TlI4Iiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJjcmVhdGU6YWN0b3JzIiwiY3JlYXRlOm1vdmllcyIsImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwicmVhZDphY3RvcnMiLCJyZWFkOm1vdmllcyIsInVwZGF0ZTphY3RvcnMiLCJ1cGRhdGU6bW92aWVzIl19.ccKxRIQ_LWAWcaRgfAEmRfhpwjRioCaroB0EPdMqhB_6eozb-1YEsPN1yTqxcvpI6qDTQjR7p9jDQYy14C663dYxC5B_EXFeju8E44A9oMBm3-aMKZh6-pQcVV1GphR6YhkJe88g9-rYvjdQa3T4vvlGviOXU8Vi6bGl29DU1XSp6i2ynpvA7nm6oi_9F9I8ifgsJ9Qd7VQ42wG37soqdXy8lmJCkNRXqq3y1NTme1mg2fp6Ab7o7x5SaLMTZf1uoeYuNrlwme6NSHH16SfQHTnZ8ZiUjCpDaO0TJVWB3-1T-mLZHdpAI7Ge35wnM2GYN0a5X8IfjovO_kq8v3QbKA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"age\": 10,\n    \"gender\": \"male\",\n    \"name\": \"George Clooney\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://udcapstone.herokuapp.com/actors",
+							"protocol": "https",
+							"host": [
+								"udcapstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains movies array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.movies).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik02c0hwNkc2dnNlM05PcV9pZ3FRayJ9.eyJpc3MiOiJodHRwczovL2Rldi10OWZ2ZXJ1bS51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTUzMTI3MzQ5Nzc4MDkyNzE4MzYiLCJhdWQiOiJDYXN0aW5nQWdlbmN5QVBJIiwiaWF0IjoxNjQxNDUzODc0LCJleHAiOjE2NDE1NDAyNzQsImF6cCI6Im9BNFFtdjlqZWp5dllTdDlGUFh4bHpXaFJ4b3M2TlI4Iiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJjcmVhdGU6YWN0b3JzIiwiY3JlYXRlOm1vdmllcyIsImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwicmVhZDphY3RvcnMiLCJyZWFkOm1vdmllcyIsInVwZGF0ZTphY3RvcnMiLCJ1cGRhdGU6bW92aWVzIl19.ccKxRIQ_LWAWcaRgfAEmRfhpwjRioCaroB0EPdMqhB_6eozb-1YEsPN1yTqxcvpI6qDTQjR7p9jDQYy14C663dYxC5B_EXFeju8E44A9oMBm3-aMKZh6-pQcVV1GphR6YhkJe88g9-rYvjdQa3T4vvlGviOXU8Vi6bGl29DU1XSp6i2ynpvA7nm6oi_9F9I8ifgsJ9Qd7VQ42wG37soqdXy8lmJCkNRXqq3y1NTme1mg2fp6Ab7o7x5SaLMTZf1uoeYuNrlwme6NSHH16SfQHTnZ8ZiUjCpDaO0TJVWB3-1T-mLZHdpAI7Ge35wnM2GYN0a5X8IfjovO_kq8v3QbKA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://udcapstone.herokuapp.com/movies",
+							"protocol": "https",
+							"host": [
+								"udcapstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains actors array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.actors).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik02c0hwNkc2dnNlM05PcV9pZ3FRayJ9.eyJpc3MiOiJodHRwczovL2Rldi10OWZ2ZXJ1bS51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTUzMTI3MzQ5Nzc4MDkyNzE4MzYiLCJhdWQiOiJDYXN0aW5nQWdlbmN5QVBJIiwiaWF0IjoxNjQxNDUzODc0LCJleHAiOjE2NDE1NDAyNzQsImF6cCI6Im9BNFFtdjlqZWp5dllTdDlGUFh4bHpXaFJ4b3M2TlI4Iiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJjcmVhdGU6YWN0b3JzIiwiY3JlYXRlOm1vdmllcyIsImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwicmVhZDphY3RvcnMiLCJyZWFkOm1vdmllcyIsInVwZGF0ZTphY3RvcnMiLCJ1cGRhdGU6bW92aWVzIl19.ccKxRIQ_LWAWcaRgfAEmRfhpwjRioCaroB0EPdMqhB_6eozb-1YEsPN1yTqxcvpI6qDTQjR7p9jDQYy14C663dYxC5B_EXFeju8E44A9oMBm3-aMKZh6-pQcVV1GphR6YhkJe88g9-rYvjdQa3T4vvlGviOXU8Vi6bGl29DU1XSp6i2ynpvA7nm6oi_9F9I8ifgsJ9Qd7VQ42wG37soqdXy8lmJCkNRXqq3y1NTme1mg2fp6Ab7o7x5SaLMTZf1uoeYuNrlwme6NSHH16SfQHTnZ8ZiUjCpDaO0TJVWB3-1T-mLZHdpAI7Ge35wnM2GYN0a5X8IfjovO_kq8v3QbKA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://udcapstone.herokuapp.com/actors",
+							"protocol": "https",
+							"host": [
+								"udcapstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains movies array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.movies).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik02c0hwNkc2dnNlM05PcV9pZ3FRayJ9.eyJpc3MiOiJodHRwczovL2Rldi10OWZ2ZXJ1bS51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTUzMTI3MzQ5Nzc4MDkyNzE4MzYiLCJhdWQiOiJDYXN0aW5nQWdlbmN5QVBJIiwiaWF0IjoxNjQxNDUzODc0LCJleHAiOjE2NDE1NDAyNzQsImF6cCI6Im9BNFFtdjlqZWp5dllTdDlGUFh4bHpXaFJ4b3M2TlI4Iiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJjcmVhdGU6YWN0b3JzIiwiY3JlYXRlOm1vdmllcyIsImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwicmVhZDphY3RvcnMiLCJyZWFkOm1vdmllcyIsInVwZGF0ZTphY3RvcnMiLCJ1cGRhdGU6bW92aWVzIl19.ccKxRIQ_LWAWcaRgfAEmRfhpwjRioCaroB0EPdMqhB_6eozb-1YEsPN1yTqxcvpI6qDTQjR7p9jDQYy14C663dYxC5B_EXFeju8E44A9oMBm3-aMKZh6-pQcVV1GphR6YhkJe88g9-rYvjdQa3T4vvlGviOXU8Vi6bGl29DU1XSp6i2ynpvA7nm6oi_9F9I8ifgsJ9Qd7VQ42wG37soqdXy8lmJCkNRXqq3y1NTme1mg2fp6Ab7o7x5SaLMTZf1uoeYuNrlwme6NSHH16SfQHTnZ8ZiUjCpDaO0TJVWB3-1T-mLZHdpAI7Ge35wnM2GYN0a5X8IfjovO_kq8v3QbKA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"New Movie 2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://udcapstone.herokuapp.com/movies/6",
+							"protocol": "https",
+							"host": [
+								"udcapstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains actors array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.actors).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik02c0hwNkc2dnNlM05PcV9pZ3FRayJ9.eyJpc3MiOiJodHRwczovL2Rldi10OWZ2ZXJ1bS51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTUzMTI3MzQ5Nzc4MDkyNzE4MzYiLCJhdWQiOiJDYXN0aW5nQWdlbmN5QVBJIiwiaWF0IjoxNjQxNDUzODc0LCJleHAiOjE2NDE1NDAyNzQsImF6cCI6Im9BNFFtdjlqZWp5dllTdDlGUFh4bHpXaFJ4b3M2TlI4Iiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJjcmVhdGU6YWN0b3JzIiwiY3JlYXRlOm1vdmllcyIsImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwicmVhZDphY3RvcnMiLCJyZWFkOm1vdmllcyIsInVwZGF0ZTphY3RvcnMiLCJ1cGRhdGU6bW92aWVzIl19.ccKxRIQ_LWAWcaRgfAEmRfhpwjRioCaroB0EPdMqhB_6eozb-1YEsPN1yTqxcvpI6qDTQjR7p9jDQYy14C663dYxC5B_EXFeju8E44A9oMBm3-aMKZh6-pQcVV1GphR6YhkJe88g9-rYvjdQa3T4vvlGviOXU8Vi6bGl29DU1XSp6i2ynpvA7nm6oi_9F9I8ifgsJ9Qd7VQ42wG37soqdXy8lmJCkNRXqq3y1NTme1mg2fp6Ab7o7x5SaLMTZf1uoeYuNrlwme6NSHH16SfQHTnZ8ZiUjCpDaO0TJVWB3-1T-mLZHdpAI7Ge35wnM2GYN0a5X8IfjovO_kq8v3QbKA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"age\": 12,\n    \"gender\": \"male\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://udcapstone.herokuapp.com/actors/6",
+							"protocol": "https",
+							"host": [
+								"udcapstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik02c0hwNkc2dnNlM05PcV9pZ3FRayJ9.eyJpc3MiOiJodHRwczovL2Rldi10OWZ2ZXJ1bS51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTUzMTI3MzQ5Nzc4MDkyNzE4MzYiLCJhdWQiOiJDYXN0aW5nQWdlbmN5QVBJIiwiaWF0IjoxNjQxNDUzODc0LCJleHAiOjE2NDE1NDAyNzQsImF6cCI6Im9BNFFtdjlqZWp5dllTdDlGUFh4bHpXaFJ4b3M2TlI4Iiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJjcmVhdGU6YWN0b3JzIiwiY3JlYXRlOm1vdmllcyIsImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwicmVhZDphY3RvcnMiLCJyZWFkOm1vdmllcyIsInVwZGF0ZTphY3RvcnMiLCJ1cGRhdGU6bW92aWVzIl19.ccKxRIQ_LWAWcaRgfAEmRfhpwjRioCaroB0EPdMqhB_6eozb-1YEsPN1yTqxcvpI6qDTQjR7p9jDQYy14C663dYxC5B_EXFeju8E44A9oMBm3-aMKZh6-pQcVV1GphR6YhkJe88g9-rYvjdQa3T4vvlGviOXU8Vi6bGl29DU1XSp6i2ynpvA7nm6oi_9F9I8ifgsJ9Qd7VQ42wG37soqdXy8lmJCkNRXqq3y1NTme1mg2fp6Ab7o7x5SaLMTZf1uoeYuNrlwme6NSHH16SfQHTnZ8ZiUjCpDaO0TJVWB3-1T-mLZHdpAI7Ge35wnM2GYN0a5X8IfjovO_kq8v3QbKA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://udcapstone.herokuapp.com/movies/6",
+							"protocol": "https",
+							"host": [
+								"udcapstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik02c0hwNkc2dnNlM05PcV9pZ3FRayJ9.eyJpc3MiOiJodHRwczovL2Rldi10OWZ2ZXJ1bS51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTUzMTI3MzQ5Nzc4MDkyNzE4MzYiLCJhdWQiOiJDYXN0aW5nQWdlbmN5QVBJIiwiaWF0IjoxNjQxNDUzODc0LCJleHAiOjE2NDE1NDAyNzQsImF6cCI6Im9BNFFtdjlqZWp5dllTdDlGUFh4bHpXaFJ4b3M2TlI4Iiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJjcmVhdGU6YWN0b3JzIiwiY3JlYXRlOm1vdmllcyIsImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwicmVhZDphY3RvcnMiLCJyZWFkOm1vdmllcyIsInVwZGF0ZTphY3RvcnMiLCJ1cGRhdGU6bW92aWVzIl19.ccKxRIQ_LWAWcaRgfAEmRfhpwjRioCaroB0EPdMqhB_6eozb-1YEsPN1yTqxcvpI6qDTQjR7p9jDQYy14C663dYxC5B_EXFeju8E44A9oMBm3-aMKZh6-pQcVV1GphR6YhkJe88g9-rYvjdQa3T4vvlGviOXU8Vi6bGl29DU1XSp6i2ynpvA7nm6oi_9F9I8ifgsJ9Qd7VQ42wG37soqdXy8lmJCkNRXqq3y1NTme1mg2fp6Ab7o7x5SaLMTZf1uoeYuNrlwme6NSHH16SfQHTnZ8ZiUjCpDaO0TJVWB3-1T-mLZHdpAI7Ge35wnM2GYN0a5X8IfjovO_kq8v3QbKA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://udcapstone.herokuapp.com/actors/6",
+							"protocol": "https",
+							"host": [
+								"udcapstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Casting Director",
+			"item": [
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {",
+									"    pm.response.to.have.status(403);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik02c0hwNkc2dnNlM05PcV9pZ3FRayJ9.eyJpc3MiOiJodHRwczovL2Rldi10OWZ2ZXJ1bS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjFkNWEwYzdlMDljODMwMDZmMWJjZDkxIiwiYXVkIjoiQ2FzdGluZ0FnZW5jeUFQSSIsImlhdCI6MTY0MTQ1NDI1OSwiZXhwIjoxNjQxNTQwNjU5LCJhenAiOiJvQTRRbXY5amVqeXZZU3Q5RlBYeGx6V2hSeG9zNk5SOCIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiY3JlYXRlOmFjdG9ycyIsImRlbGV0ZTphY3RvcnMiLCJyZWFkOmFjdG9ycyIsInJlYWQ6bW92aWVzIiwidXBkYXRlOmFjdG9ycyIsInVwZGF0ZTptb3ZpZXMiXX0.S0iEciN36y45sFUCGl26v8oyBhfqG15SjarCScnaLUT-_Zh-G59piRDsw8vkUp7nDSWTUeMLSZPb_2K3X1TTRBNSOS-7LckFhdwS9N8NkWtx3RB9LqoC-loe7K6TXMsGKRIukxWTm0STnT1A_nH4SeZajkhKsHB1d6Uh0DDHMkoBOkO-O_WuD5qeqbPWA66sizRm03Cik2roag49a0IAlhM6G3He6CvOgtZNScB4xArkPBPSXJHimn6YLOW5-Koyumzs8dknTrmTV9E68X2AxPS3mOyqdaCphw6Wvc3B57K83IrQxOvlcGnPBhhlz5y6XWmBLusa8j2UmD-B2DckPw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"New Movie\",\n    \"release_date\": \"25/12/20 11:12:13\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://udcapstone.herokuapp.com/movies",
+							"protocol": "https",
+							"host": [
+								"udcapstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik02c0hwNkc2dnNlM05PcV9pZ3FRayJ9.eyJpc3MiOiJodHRwczovL2Rldi10OWZ2ZXJ1bS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjFkNWEwYzdlMDljODMwMDZmMWJjZDkxIiwiYXVkIjoiQ2FzdGluZ0FnZW5jeUFQSSIsImlhdCI6MTY0MTQ1NDI1OSwiZXhwIjoxNjQxNTQwNjU5LCJhenAiOiJvQTRRbXY5amVqeXZZU3Q5RlBYeGx6V2hSeG9zNk5SOCIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiY3JlYXRlOmFjdG9ycyIsImRlbGV0ZTphY3RvcnMiLCJyZWFkOmFjdG9ycyIsInJlYWQ6bW92aWVzIiwidXBkYXRlOmFjdG9ycyIsInVwZGF0ZTptb3ZpZXMiXX0.S0iEciN36y45sFUCGl26v8oyBhfqG15SjarCScnaLUT-_Zh-G59piRDsw8vkUp7nDSWTUeMLSZPb_2K3X1TTRBNSOS-7LckFhdwS9N8NkWtx3RB9LqoC-loe7K6TXMsGKRIukxWTm0STnT1A_nH4SeZajkhKsHB1d6Uh0DDHMkoBOkO-O_WuD5qeqbPWA66sizRm03Cik2roag49a0IAlhM6G3He6CvOgtZNScB4xArkPBPSXJHimn6YLOW5-Koyumzs8dknTrmTV9E68X2AxPS3mOyqdaCphw6Wvc3B57K83IrQxOvlcGnPBhhlz5y6XWmBLusa8j2UmD-B2DckPw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"age\": 10,\n    \"gender\": \"male\",\n    \"name\": \"George Clooney\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://udcapstone.herokuapp.com/actors",
+							"protocol": "https",
+							"host": [
+								"udcapstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains movies array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.movies).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik02c0hwNkc2dnNlM05PcV9pZ3FRayJ9.eyJpc3MiOiJodHRwczovL2Rldi10OWZ2ZXJ1bS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjFkNWEwYzdlMDljODMwMDZmMWJjZDkxIiwiYXVkIjoiQ2FzdGluZ0FnZW5jeUFQSSIsImlhdCI6MTY0MTQ1NDI1OSwiZXhwIjoxNjQxNTQwNjU5LCJhenAiOiJvQTRRbXY5amVqeXZZU3Q5RlBYeGx6V2hSeG9zNk5SOCIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiY3JlYXRlOmFjdG9ycyIsImRlbGV0ZTphY3RvcnMiLCJyZWFkOmFjdG9ycyIsInJlYWQ6bW92aWVzIiwidXBkYXRlOmFjdG9ycyIsInVwZGF0ZTptb3ZpZXMiXX0.S0iEciN36y45sFUCGl26v8oyBhfqG15SjarCScnaLUT-_Zh-G59piRDsw8vkUp7nDSWTUeMLSZPb_2K3X1TTRBNSOS-7LckFhdwS9N8NkWtx3RB9LqoC-loe7K6TXMsGKRIukxWTm0STnT1A_nH4SeZajkhKsHB1d6Uh0DDHMkoBOkO-O_WuD5qeqbPWA66sizRm03Cik2roag49a0IAlhM6G3He6CvOgtZNScB4xArkPBPSXJHimn6YLOW5-Koyumzs8dknTrmTV9E68X2AxPS3mOyqdaCphw6Wvc3B57K83IrQxOvlcGnPBhhlz5y6XWmBLusa8j2UmD-B2DckPw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://udcapstone.herokuapp.com/movies",
+							"protocol": "https",
+							"host": [
+								"udcapstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains actors array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.actors).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik02c0hwNkc2dnNlM05PcV9pZ3FRayJ9.eyJpc3MiOiJodHRwczovL2Rldi10OWZ2ZXJ1bS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjFkNWEwYzdlMDljODMwMDZmMWJjZDkxIiwiYXVkIjoiQ2FzdGluZ0FnZW5jeUFQSSIsImlhdCI6MTY0MTQ1NDI1OSwiZXhwIjoxNjQxNTQwNjU5LCJhenAiOiJvQTRRbXY5amVqeXZZU3Q5RlBYeGx6V2hSeG9zNk5SOCIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiY3JlYXRlOmFjdG9ycyIsImRlbGV0ZTphY3RvcnMiLCJyZWFkOmFjdG9ycyIsInJlYWQ6bW92aWVzIiwidXBkYXRlOmFjdG9ycyIsInVwZGF0ZTptb3ZpZXMiXX0.S0iEciN36y45sFUCGl26v8oyBhfqG15SjarCScnaLUT-_Zh-G59piRDsw8vkUp7nDSWTUeMLSZPb_2K3X1TTRBNSOS-7LckFhdwS9N8NkWtx3RB9LqoC-loe7K6TXMsGKRIukxWTm0STnT1A_nH4SeZajkhKsHB1d6Uh0DDHMkoBOkO-O_WuD5qeqbPWA66sizRm03Cik2roag49a0IAlhM6G3He6CvOgtZNScB4xArkPBPSXJHimn6YLOW5-Koyumzs8dknTrmTV9E68X2AxPS3mOyqdaCphw6Wvc3B57K83IrQxOvlcGnPBhhlz5y6XWmBLusa8j2UmD-B2DckPw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://udcapstone.herokuapp.com/actors",
+							"protocol": "https",
+							"host": [
+								"udcapstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains movies array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.movies).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik02c0hwNkc2dnNlM05PcV9pZ3FRayJ9.eyJpc3MiOiJodHRwczovL2Rldi10OWZ2ZXJ1bS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjFkNWEwYzdlMDljODMwMDZmMWJjZDkxIiwiYXVkIjoiQ2FzdGluZ0FnZW5jeUFQSSIsImlhdCI6MTY0MTQ1NDI1OSwiZXhwIjoxNjQxNTQwNjU5LCJhenAiOiJvQTRRbXY5amVqeXZZU3Q5RlBYeGx6V2hSeG9zNk5SOCIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiY3JlYXRlOmFjdG9ycyIsImRlbGV0ZTphY3RvcnMiLCJyZWFkOmFjdG9ycyIsInJlYWQ6bW92aWVzIiwidXBkYXRlOmFjdG9ycyIsInVwZGF0ZTptb3ZpZXMiXX0.S0iEciN36y45sFUCGl26v8oyBhfqG15SjarCScnaLUT-_Zh-G59piRDsw8vkUp7nDSWTUeMLSZPb_2K3X1TTRBNSOS-7LckFhdwS9N8NkWtx3RB9LqoC-loe7K6TXMsGKRIukxWTm0STnT1A_nH4SeZajkhKsHB1d6Uh0DDHMkoBOkO-O_WuD5qeqbPWA66sizRm03Cik2roag49a0IAlhM6G3He6CvOgtZNScB4xArkPBPSXJHimn6YLOW5-Koyumzs8dknTrmTV9E68X2AxPS3mOyqdaCphw6Wvc3B57K83IrQxOvlcGnPBhhlz5y6XWmBLusa8j2UmD-B2DckPw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"New Movie 2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://udcapstone.herokuapp.com/movies/7",
+							"protocol": "https",
+							"host": [
+								"udcapstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains actors array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.actors).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik02c0hwNkc2dnNlM05PcV9pZ3FRayJ9.eyJpc3MiOiJodHRwczovL2Rldi10OWZ2ZXJ1bS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjFkNWEwYzdlMDljODMwMDZmMWJjZDkxIiwiYXVkIjoiQ2FzdGluZ0FnZW5jeUFQSSIsImlhdCI6MTY0MTQ1NDI1OSwiZXhwIjoxNjQxNTQwNjU5LCJhenAiOiJvQTRRbXY5amVqeXZZU3Q5RlBYeGx6V2hSeG9zNk5SOCIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiY3JlYXRlOmFjdG9ycyIsImRlbGV0ZTphY3RvcnMiLCJyZWFkOmFjdG9ycyIsInJlYWQ6bW92aWVzIiwidXBkYXRlOmFjdG9ycyIsInVwZGF0ZTptb3ZpZXMiXX0.S0iEciN36y45sFUCGl26v8oyBhfqG15SjarCScnaLUT-_Zh-G59piRDsw8vkUp7nDSWTUeMLSZPb_2K3X1TTRBNSOS-7LckFhdwS9N8NkWtx3RB9LqoC-loe7K6TXMsGKRIukxWTm0STnT1A_nH4SeZajkhKsHB1d6Uh0DDHMkoBOkO-O_WuD5qeqbPWA66sizRm03Cik2roag49a0IAlhM6G3He6CvOgtZNScB4xArkPBPSXJHimn6YLOW5-Koyumzs8dknTrmTV9E68X2AxPS3mOyqdaCphw6Wvc3B57K83IrQxOvlcGnPBhhlz5y6XWmBLusa8j2UmD-B2DckPw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"age\": 12,\n    \"gender\": \"male\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://udcapstone.herokuapp.com/actors/7",
+							"protocol": "https",
+							"host": [
+								"udcapstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik02c0hwNkc2dnNlM05PcV9pZ3FRayJ9.eyJpc3MiOiJodHRwczovL2Rldi10OWZ2ZXJ1bS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjFkNWEwYzdlMDljODMwMDZmMWJjZDkxIiwiYXVkIjoiQ2FzdGluZ0FnZW5jeUFQSSIsImlhdCI6MTY0MTQ1NDI1OSwiZXhwIjoxNjQxNTQwNjU5LCJhenAiOiJvQTRRbXY5amVqeXZZU3Q5RlBYeGx6V2hSeG9zNk5SOCIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiY3JlYXRlOmFjdG9ycyIsImRlbGV0ZTphY3RvcnMiLCJyZWFkOmFjdG9ycyIsInJlYWQ6bW92aWVzIiwidXBkYXRlOmFjdG9ycyIsInVwZGF0ZTptb3ZpZXMiXX0.S0iEciN36y45sFUCGl26v8oyBhfqG15SjarCScnaLUT-_Zh-G59piRDsw8vkUp7nDSWTUeMLSZPb_2K3X1TTRBNSOS-7LckFhdwS9N8NkWtx3RB9LqoC-loe7K6TXMsGKRIukxWTm0STnT1A_nH4SeZajkhKsHB1d6Uh0DDHMkoBOkO-O_WuD5qeqbPWA66sizRm03Cik2roag49a0IAlhM6G3He6CvOgtZNScB4xArkPBPSXJHimn6YLOW5-Koyumzs8dknTrmTV9E68X2AxPS3mOyqdaCphw6Wvc3B57K83IrQxOvlcGnPBhhlz5y6XWmBLusa8j2UmD-B2DckPw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://udcapstone.herokuapp.com/movies/7",
+							"protocol": "https",
+							"host": [
+								"udcapstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik02c0hwNkc2dnNlM05PcV9pZ3FRayJ9.eyJpc3MiOiJodHRwczovL2Rldi10OWZ2ZXJ1bS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjFkNWEwYzdlMDljODMwMDZmMWJjZDkxIiwiYXVkIjoiQ2FzdGluZ0FnZW5jeUFQSSIsImlhdCI6MTY0MTQ1NDI1OSwiZXhwIjoxNjQxNTQwNjU5LCJhenAiOiJvQTRRbXY5amVqeXZZU3Q5RlBYeGx6V2hSeG9zNk5SOCIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiY3JlYXRlOmFjdG9ycyIsImRlbGV0ZTphY3RvcnMiLCJyZWFkOmFjdG9ycyIsInJlYWQ6bW92aWVzIiwidXBkYXRlOmFjdG9ycyIsInVwZGF0ZTptb3ZpZXMiXX0.S0iEciN36y45sFUCGl26v8oyBhfqG15SjarCScnaLUT-_Zh-G59piRDsw8vkUp7nDSWTUeMLSZPb_2K3X1TTRBNSOS-7LckFhdwS9N8NkWtx3RB9LqoC-loe7K6TXMsGKRIukxWTm0STnT1A_nH4SeZajkhKsHB1d6Uh0DDHMkoBOkO-O_WuD5qeqbPWA66sizRm03Cik2roag49a0IAlhM6G3He6CvOgtZNScB4xArkPBPSXJHimn6YLOW5-Koyumzs8dknTrmTV9E68X2AxPS3mOyqdaCphw6Wvc3B57K83IrQxOvlcGnPBhhlz5y6XWmBLusa8j2UmD-B2DckPw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://udcapstone.herokuapp.com/actors/7",
+							"protocol": "https",
+							"host": [
+								"udcapstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Casting Assist",
+			"item": [
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {",
+									"    pm.response.to.have.status(403);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik02c0hwNkc2dnNlM05PcV9pZ3FRayJ9.eyJpc3MiOiJodHRwczovL2Rldi10OWZ2ZXJ1bS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjFjYzhjNjlmYTJjZDEwMDY5ZWRjYzVjIiwiYXVkIjoiQ2FzdGluZ0FnZW5jeUFQSSIsImlhdCI6MTY0MTQ1NDU0MywiZXhwIjoxNjQxNTQwOTQzLCJhenAiOiJvQTRRbXY5amVqeXZZU3Q5RlBYeGx6V2hSeG9zNk5SOCIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsicmVhZDphY3RvcnMiLCJyZWFkOm1vdmllcyJdfQ.oK0FTvfgG6ZR_S5dy3Sxcd5llzfmgeUAVVA2v8dPbWhNjWkNsKSi-7z93OEtWul7Ws8ed_Gdnls_GzuAUwEWnyKaowW4fK9Rwgf1Ff9ChC6hfRLn1x5m1GpzYynNqBJ1gx-6biYWKI__zzkdnuuMAT8HrUayf40nOHqPOPfEZLoFh7kZ4L4YjZCgHXa4syUNRhuYxxt-BjDqIhIvx3znyXLEdfvNMr70SZfDG8CS7-H83_KLeTf7OPeZerQvJtL-dQNJpqiCcSt5vrXPn4N5MRXWz53X_R20u0sDHzjvRCkZeAX2EDLujCSC73lg8WDS7ry0EifzJnlRgrAz6JlKNg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"New Movie\",\n    \"release_date\": \"25/12/20 11:12:13\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://udcapstone.herokuapp.com/movies",
+							"protocol": "https",
+							"host": [
+								"udcapstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {",
+									"    pm.response.to.have.status(403);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik02c0hwNkc2dnNlM05PcV9pZ3FRayJ9.eyJpc3MiOiJodHRwczovL2Rldi10OWZ2ZXJ1bS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjFjYzhjNjlmYTJjZDEwMDY5ZWRjYzVjIiwiYXVkIjoiQ2FzdGluZ0FnZW5jeUFQSSIsImlhdCI6MTY0MTQ1NDU0MywiZXhwIjoxNjQxNTQwOTQzLCJhenAiOiJvQTRRbXY5amVqeXZZU3Q5RlBYeGx6V2hSeG9zNk5SOCIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsicmVhZDphY3RvcnMiLCJyZWFkOm1vdmllcyJdfQ.oK0FTvfgG6ZR_S5dy3Sxcd5llzfmgeUAVVA2v8dPbWhNjWkNsKSi-7z93OEtWul7Ws8ed_Gdnls_GzuAUwEWnyKaowW4fK9Rwgf1Ff9ChC6hfRLn1x5m1GpzYynNqBJ1gx-6biYWKI__zzkdnuuMAT8HrUayf40nOHqPOPfEZLoFh7kZ4L4YjZCgHXa4syUNRhuYxxt-BjDqIhIvx3znyXLEdfvNMr70SZfDG8CS7-H83_KLeTf7OPeZerQvJtL-dQNJpqiCcSt5vrXPn4N5MRXWz53X_R20u0sDHzjvRCkZeAX2EDLujCSC73lg8WDS7ry0EifzJnlRgrAz6JlKNg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"age\": 10,\n    \"gender\": \"male\",\n    \"name\": \"George Clooney\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://udcapstone.herokuapp.com/actors",
+							"protocol": "https",
+							"host": [
+								"udcapstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains movies array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.movies).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik02c0hwNkc2dnNlM05PcV9pZ3FRayJ9.eyJpc3MiOiJodHRwczovL2Rldi10OWZ2ZXJ1bS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjFjYzhjNjlmYTJjZDEwMDY5ZWRjYzVjIiwiYXVkIjoiQ2FzdGluZ0FnZW5jeUFQSSIsImlhdCI6MTY0MTQ1NDU0MywiZXhwIjoxNjQxNTQwOTQzLCJhenAiOiJvQTRRbXY5amVqeXZZU3Q5RlBYeGx6V2hSeG9zNk5SOCIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsicmVhZDphY3RvcnMiLCJyZWFkOm1vdmllcyJdfQ.oK0FTvfgG6ZR_S5dy3Sxcd5llzfmgeUAVVA2v8dPbWhNjWkNsKSi-7z93OEtWul7Ws8ed_Gdnls_GzuAUwEWnyKaowW4fK9Rwgf1Ff9ChC6hfRLn1x5m1GpzYynNqBJ1gx-6biYWKI__zzkdnuuMAT8HrUayf40nOHqPOPfEZLoFh7kZ4L4YjZCgHXa4syUNRhuYxxt-BjDqIhIvx3znyXLEdfvNMr70SZfDG8CS7-H83_KLeTf7OPeZerQvJtL-dQNJpqiCcSt5vrXPn4N5MRXWz53X_R20u0sDHzjvRCkZeAX2EDLujCSC73lg8WDS7ry0EifzJnlRgrAz6JlKNg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://udcapstone.herokuapp.com/movies",
+							"protocol": "https",
+							"host": [
+								"udcapstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains actors array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.actors).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik02c0hwNkc2dnNlM05PcV9pZ3FRayJ9.eyJpc3MiOiJodHRwczovL2Rldi10OWZ2ZXJ1bS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjFjYzhjNjlmYTJjZDEwMDY5ZWRjYzVjIiwiYXVkIjoiQ2FzdGluZ0FnZW5jeUFQSSIsImlhdCI6MTY0MTQ1NDU0MywiZXhwIjoxNjQxNTQwOTQzLCJhenAiOiJvQTRRbXY5amVqeXZZU3Q5RlBYeGx6V2hSeG9zNk5SOCIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsicmVhZDphY3RvcnMiLCJyZWFkOm1vdmllcyJdfQ.oK0FTvfgG6ZR_S5dy3Sxcd5llzfmgeUAVVA2v8dPbWhNjWkNsKSi-7z93OEtWul7Ws8ed_Gdnls_GzuAUwEWnyKaowW4fK9Rwgf1Ff9ChC6hfRLn1x5m1GpzYynNqBJ1gx-6biYWKI__zzkdnuuMAT8HrUayf40nOHqPOPfEZLoFh7kZ4L4YjZCgHXa4syUNRhuYxxt-BjDqIhIvx3znyXLEdfvNMr70SZfDG8CS7-H83_KLeTf7OPeZerQvJtL-dQNJpqiCcSt5vrXPn4N5MRXWz53X_R20u0sDHzjvRCkZeAX2EDLujCSC73lg8WDS7ry0EifzJnlRgrAz6JlKNg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://udcapstone.herokuapp.com/actors",
+							"protocol": "https",
+							"host": [
+								"udcapstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {",
+									"    pm.response.to.have.status(403);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik02c0hwNkc2dnNlM05PcV9pZ3FRayJ9.eyJpc3MiOiJodHRwczovL2Rldi10OWZ2ZXJ1bS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjFjYzhjNjlmYTJjZDEwMDY5ZWRjYzVjIiwiYXVkIjoiQ2FzdGluZ0FnZW5jeUFQSSIsImlhdCI6MTY0MTQ1NDU0MywiZXhwIjoxNjQxNTQwOTQzLCJhenAiOiJvQTRRbXY5amVqeXZZU3Q5RlBYeGx6V2hSeG9zNk5SOCIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsicmVhZDphY3RvcnMiLCJyZWFkOm1vdmllcyJdfQ.oK0FTvfgG6ZR_S5dy3Sxcd5llzfmgeUAVVA2v8dPbWhNjWkNsKSi-7z93OEtWul7Ws8ed_Gdnls_GzuAUwEWnyKaowW4fK9Rwgf1Ff9ChC6hfRLn1x5m1GpzYynNqBJ1gx-6biYWKI__zzkdnuuMAT8HrUayf40nOHqPOPfEZLoFh7kZ4L4YjZCgHXa4syUNRhuYxxt-BjDqIhIvx3znyXLEdfvNMr70SZfDG8CS7-H83_KLeTf7OPeZerQvJtL-dQNJpqiCcSt5vrXPn4N5MRXWz53X_R20u0sDHzjvRCkZeAX2EDLujCSC73lg8WDS7ry0EifzJnlRgrAz6JlKNg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"New Movie 2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://udcapstone.herokuapp.com/movies/7",
+							"protocol": "https",
+							"host": [
+								"udcapstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {",
+									"    pm.response.to.have.status(403);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik02c0hwNkc2dnNlM05PcV9pZ3FRayJ9.eyJpc3MiOiJodHRwczovL2Rldi10OWZ2ZXJ1bS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjFjYzhjNjlmYTJjZDEwMDY5ZWRjYzVjIiwiYXVkIjoiQ2FzdGluZ0FnZW5jeUFQSSIsImlhdCI6MTY0MTQ1NDU0MywiZXhwIjoxNjQxNTQwOTQzLCJhenAiOiJvQTRRbXY5amVqeXZZU3Q5RlBYeGx6V2hSeG9zNk5SOCIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsicmVhZDphY3RvcnMiLCJyZWFkOm1vdmllcyJdfQ.oK0FTvfgG6ZR_S5dy3Sxcd5llzfmgeUAVVA2v8dPbWhNjWkNsKSi-7z93OEtWul7Ws8ed_Gdnls_GzuAUwEWnyKaowW4fK9Rwgf1Ff9ChC6hfRLn1x5m1GpzYynNqBJ1gx-6biYWKI__zzkdnuuMAT8HrUayf40nOHqPOPfEZLoFh7kZ4L4YjZCgHXa4syUNRhuYxxt-BjDqIhIvx3znyXLEdfvNMr70SZfDG8CS7-H83_KLeTf7OPeZerQvJtL-dQNJpqiCcSt5vrXPn4N5MRXWz53X_R20u0sDHzjvRCkZeAX2EDLujCSC73lg8WDS7ry0EifzJnlRgrAz6JlKNg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"age\": 12,\n    \"gender\": \"male\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://udcapstone.herokuapp.com/actors/7",
+							"protocol": "https",
+							"host": [
+								"udcapstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik02c0hwNkc2dnNlM05PcV9pZ3FRayJ9.eyJpc3MiOiJodHRwczovL2Rldi10OWZ2ZXJ1bS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjFjYzhjNjlmYTJjZDEwMDY5ZWRjYzVjIiwiYXVkIjoiQ2FzdGluZ0FnZW5jeUFQSSIsImlhdCI6MTY0MTQ1NDU0MywiZXhwIjoxNjQxNTQwOTQzLCJhenAiOiJvQTRRbXY5amVqeXZZU3Q5RlBYeGx6V2hSeG9zNk5SOCIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsicmVhZDphY3RvcnMiLCJyZWFkOm1vdmllcyJdfQ.oK0FTvfgG6ZR_S5dy3Sxcd5llzfmgeUAVVA2v8dPbWhNjWkNsKSi-7z93OEtWul7Ws8ed_Gdnls_GzuAUwEWnyKaowW4fK9Rwgf1Ff9ChC6hfRLn1x5m1GpzYynNqBJ1gx-6biYWKI__zzkdnuuMAT8HrUayf40nOHqPOPfEZLoFh7kZ4L4YjZCgHXa4syUNRhuYxxt-BjDqIhIvx3znyXLEdfvNMr70SZfDG8CS7-H83_KLeTf7OPeZerQvJtL-dQNJpqiCcSt5vrXPn4N5MRXWz53X_R20u0sDHzjvRCkZeAX2EDLujCSC73lg8WDS7ry0EifzJnlRgrAz6JlKNg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://udcapstone.herokuapp.com/movies/7",
+							"protocol": "https",
+							"host": [
+								"udcapstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik02c0hwNkc2dnNlM05PcV9pZ3FRayJ9.eyJpc3MiOiJodHRwczovL2Rldi10OWZ2ZXJ1bS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjFjYzhjNjlmYTJjZDEwMDY5ZWRjYzVjIiwiYXVkIjoiQ2FzdGluZ0FnZW5jeUFQSSIsImlhdCI6MTY0MTQ1NDU0MywiZXhwIjoxNjQxNTQwOTQzLCJhenAiOiJvQTRRbXY5amVqeXZZU3Q5RlBYeGx6V2hSeG9zNk5SOCIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsicmVhZDphY3RvcnMiLCJyZWFkOm1vdmllcyJdfQ.oK0FTvfgG6ZR_S5dy3Sxcd5llzfmgeUAVVA2v8dPbWhNjWkNsKSi-7z93OEtWul7Ws8ed_Gdnls_GzuAUwEWnyKaowW4fK9Rwgf1Ff9ChC6hfRLn1x5m1GpzYynNqBJ1gx-6biYWKI__zzkdnuuMAT8HrUayf40nOHqPOPfEZLoFh7kZ4L4YjZCgHXa4syUNRhuYxxt-BjDqIhIvx3znyXLEdfvNMr70SZfDG8CS7-H83_KLeTf7OPeZerQvJtL-dQNJpqiCcSt5vrXPn4N5MRXWz53X_R20u0sDHzjvRCkZeAX2EDLujCSC73lg8WDS7ry0EifzJnlRgrAz6JlKNg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://udcapstone.herokuapp.com/actors/7",
+							"protocol": "https",
+							"host": [
+								"udcapstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "public",
+			"item": [
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"New Movie\",\n    \"release_date\": \"25/12/20 11:12:13\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://udcapstone.herokuapp.com/movies",
+							"protocol": "https",
+							"host": [
+								"udcapstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"age\": 10,\n    \"gender\": \"male\",\n    \"name\": \"George Clooney\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://udcapstone.herokuapp.com/actors",
+							"protocol": "https",
+							"host": [
+								"udcapstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://udcapstone.herokuapp.com/movies",
+							"protocol": "https",
+							"host": [
+								"udcapstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://udcapstone.herokuapp.com/movies",
+							"protocol": "https",
+							"host": [
+								"udcapstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"New Movie 2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://udcapstone.herokuapp.com/movies/1",
+							"protocol": "https",
+							"host": [
+								"udcapstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"age\": 12,\n    \"gender\": \"male\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://udcapstone.herokuapp.com/movies/1",
+							"protocol": "https",
+							"host": [
+								"udcapstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://udcapstone.herokuapp.com/movies/1",
+							"protocol": "https",
+							"host": [
+								"udcapstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://udcapstone.herokuapp.com/movies/1",
+							"protocol": "https",
+							"host": [
+								"udcapstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
